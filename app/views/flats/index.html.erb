@@ -1,0 +1,23 @@
+<div class="container mt-3">
+ <div class="row">
+  <h1>Welcome at Airbnb by Amaury and Jeanne</h1>
+</div>
+
+ <div class="row">
+    <% @flats.each do |flat| %>
+    <div class="col-md-4">
+      <div class="flat-card all-card">
+        <div class="flat-card-image image" style="background-image: url('https://picsum.photos/200/300/?random')"></div>
+        <div class="flat-card-content content-only"><%= flat.name %>
+          <div class="flat-card-title"><%= flat.address %></div>
+          <div class="flex">
+            <div class="flex"><%= flat.number_of_guests %></div>
+            <div class="flex ml-3"><%= flat.price_per_night %></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+</div>
